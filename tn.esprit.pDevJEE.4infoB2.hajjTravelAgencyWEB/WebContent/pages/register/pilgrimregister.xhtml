@@ -1,0 +1,80 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"                
+                template="/template/template.xhtml">
+                	
+			<ui:define name="pageTitle">
+			Register Pilgrim
+			</ui:define>	
+			<ui:define name="pTitle">
+			Register as Pilgrim
+			</ui:define>		
+			<ui:define name="pageContent">
+			<h:form id="form0">			
+	<p:panelGrid columns="3">
+	<h:outputText value="First Name" />
+	<p:inputText value="#{pilgrimRegBean.pilgrim.pilgrimFirstName}" id="first"/>
+			<p:message for="first" />
+	
+	<h:outputText value="Last Name" />
+	<p:inputText value="#{pilgrimRegBean.pilgrim.pilgrimLastName}" id="last"/>
+			<p:message for="last" />
+	
+	<h:outputText value="Gender" />
+	 <p:selectOneMenu value="#{pilgrimRegBean.pilgrim.pilgrimGender}" id="gender">  
+            <f:selectItem itemLabel="Male" itemValue="Male" />  
+            <f:selectItem itemLabel="Female" itemValue="Female" />  
+             </p:selectOneMenu> 
+             		<p:message for="gender" />
+             
+    <h:outputText value="BirthDate" />             
+	<p:calendar value="#{pilgrimRegBean.pilgrim.pilgrimBirthDate}" id="bdate"/>
+			<p:message for="bdate" />
+	
+	<h:outputText value="CIN" />
+	<p:inputText value="#{pilgrimRegBean.pilgrim.pilgrimCin}"
+       id="cin"
+        required="true"
+        requiredMessage="cin is required"
+        validatorMessage="cin is required"     >
+
+     <f:validateLength minimum="6" maximum="6" for="cin"></f:validateLength>
+
+    </p:inputText>
+    <p:message for="cin"/>
+	
+	
+	
+	
+	
+	<h:outputText value="Passport" />
+	<p:inputText value="#{pilgrimRegBean.pilgrim.pilgrimPassport}" 
+	id="passport"
+        required="true"
+        requiredMessage="this field is required"
+	/>
+	<p:message for="passport" />
+	
+	<h:outputText value="Address" />
+	<p:inputText value="#{pilgrimRegBean.pilgrim.pilgrimAddress}" id="address"/>
+		<p:message for="address" />
+	
+	<h:outputText value="Email" />
+	<p:inputText value="#{pilgrimRegBean.pilgrim.pilgrimEmail}" id="email"/>
+			<p:message for="email" />
+	
+	<h:outputText value="Phone" />
+	<p:inputText value="#{pilgrimRegBean.pilgrim.pilgrimPhone}" id="phone"/>
+			<p:message for="phone" />
+	
+	<p:commandButton value="Cancel" action="#{pilgrimRegBean.doCancel}" update=":form0" process="@this"/>		
+	
+	<p:commandButton value="Register" action="#{pilgrimRegBean.registerPilgrim}" update=":form0"/>	
+		<h:outputText value="" />	
+		
+	</p:panelGrid>
+	</h:form>			
+	</ui:define>
+</ui:composition>

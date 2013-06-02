@@ -1,0 +1,41 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+                
+                  <p:panel id="pdetails"  header="Group Details" visible="#{pilgrimBean.formDisplayed}">
+				<h:form rendered="#{pilgrimBean.formDisplayed}">
+					<p:panelGrid columns="2">
+						<h:outputText value="id" />
+						<h:inputText value="" />
+						<h:outputText value="First Name" />
+						<h:inputText value="#{pilgrimBean.pilgrim.pilgrimFirstName}" />
+						<h:outputText value="Last Name" />
+						<h:inputText value="#{pilgrimBean.pilgrim.pilgrimLastName}" />
+						<h:outputText value="Gender" />
+						<h:inputText value="#{pilgrimBean.pilgrim.pilgrimGender}" />
+						<h:outputText value="CIN" />
+						<h:inputText value="#{pilgrimBean.pilgrim.pilgrimCin}" />
+						<h:outputText value="Passport" />
+						<h:inputText value="#{pilgrimBean.pilgrim.pilgrimPassport}" />						
+						<h:outputText value="Address" />
+						<h:inputText value="#{pilgrimBean.pilgrim.pilgrimAddress}" />
+						<h:outputText value="Email" />
+						<h:inputText value="#{pilgrimBean.pilgrim.pilgrimEmail}" />								
+						<h:outputText value="Phone" />
+						<h:inputText value="#{pilgrimBean.pilgrim.pilgrimPhone}" />
+						
+						<p:commandButton actionListener="#{groupBean.doCancel()}" value="cancel" />
+						<p:panelGrid columns="2">
+						<p:commandButton value="delete" actionListener="#{groupBean.doDelete()}" />
+							<p:commandButton value="save" actionListener="#{groupBean.doSaveOrUpdate()}" update=":pmaster"/>
+						</p:panelGrid>
+						
+					</p:panelGrid>
+						</h:form>
+					</p:panel>
+				
+                	
+
+</ui:composition>

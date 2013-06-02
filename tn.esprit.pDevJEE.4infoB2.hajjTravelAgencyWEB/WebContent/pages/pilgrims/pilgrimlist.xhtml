@@ -1,0 +1,64 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+	
+	
+		<h:form id="pmaster">
+	<p:dataTable rendered="#{not empty pilgrimBean.pilgrims}"
+		value="#{pilgrimBean.pilgrims}" 
+		var="pil"
+		rowKey="#{pil.pilgrimCin}"
+		border="1" 
+		paginator="true"
+		paginatorPosition="bottom"
+		rows="10"
+		selectionMode="single"
+		selection="#{pilgrimBean.pilgrim}"
+		
+		>
+
+			<f:facet name="header">  
+				  My Pilgrims
+        </f:facet>
+        <p:ajax event="rowSelect" listener="#{pilgrimBean.onRowSelect()}" update=":pdetails"/>
+
+
+			<p:column headerText="First">
+
+				<h:outputText value="#{pil.pilgrimFirstName}" />
+			</p:column>
+			<p:column headerText="Last">
+				<h:outputText value="#{pil.pilgrimLastName}" />
+			</p:column>
+			<p:column headerText="Gender">
+
+				<h:outputText value="#{pil.pilgrimGender}" />
+			</p:column>
+			<p:column headerText="CIN">
+
+				<h:outputText value="#{pil.pilgrimCin}" />
+			</p:column>
+
+			<p:column headerText="Passport">
+				<h:outputText value="#{pilgrimRegBean.pilgrim.pilgrimPassport}" />
+			</p:column>
+
+			<p:column headerText="Address">
+				<h:outputText value="#{pilgrimBean.pilgrim.pilgrimAddress}" />
+			</p:column>
+			<p:column headerText="Email">
+				<h:outputText value="#{pilgrimBean.pilgrim.pilgrimEmail}" />
+			</p:column>
+			<p:column headerText="Phone">
+				<h:outputText value="#{pilgrimBean.pilgrim.pilgrimPhone}" />
+			</p:column>
+	</p:dataTable>
+    <p:commandButton  actionListener="#{pilgrimBean.doNew()}" value="New" icon="ui-icon-circle-plus" update=":pdetails"/>
+	
+
+	</h:form>
+
+
+</ui:composition>

@@ -1,0 +1,29 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+  
+  <p:menubar>  
+        <p:submenu label="Home">  
+                <p:menuitem value="Home" url="/index.jsf" />         
+        </p:submenu> 
+    <p:submenu label="About Us">  
+                <p:menuitem value="About Us" url="/pages/about.jsf" />         
+        </p:submenu>   
+            <p:submenu label="Contact Us">  
+                <p:menuitem value="Contact Us" url="/pages/contact.jsf" />         
+       </p:submenu>
+       <p:submenu label="Register">  
+                <p:menuitem value="Pilgrim" url="/pages/register/pilgrimregister.jsf" />  
+                <p:menuitem value="Group Leader" url="/pages/register/glregister.jsf" />                         
+       </p:submenu>    
+        <p:submenu label="Our Offers">  
+                <p:menuitem value="Packages" url="/pages/packages.jsf" />
+                <p:menuitem value="Hotels" url="/pages/hotels.jsf" />
+                         
+       </p:submenu> 
+        
+    </p:menubar>  
+    
+</ui:composition>

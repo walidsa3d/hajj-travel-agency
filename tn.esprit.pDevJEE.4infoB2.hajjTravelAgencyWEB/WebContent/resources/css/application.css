@@ -1,0 +1,118 @@
+body {
+	margin: 6px;
+	padding: 0px;
+	text-align: center;
+	font:81.25% arial, helvetica, sans-serif;
+}
+
+#container {
+	width: 820px;
+	height: 683px;
+	margin: auto auto;
+	text-align: left;
+	padding: 6px;
+	border: 1px solid #333;
+	background-color: silver;
+	display: block;
+}
+
+#header {
+	width: auto;
+	display: block;
+	height: 66px;
+	border: 1px solid #333;
+}
+
+#horizon {
+	width: auto;
+	display: block;
+	height: 38px;
+	border: 1px solid #333;
+}
+
+#topbar {
+	float: left;
+	width: 490px;
+	height: 30px;
+/* 	margin-top: 6px; */
+	margin-right: 6px;
+/* 	margin-left: 6px; */
+/*  border: 1px solid #333; */
+	background-color: red;
+
+}
+
+#identity{
+	float: right;
+	width: 300px;
+	height: 24px;
+	/*margin-top: 6px;
+	margin-right: 6px;
+	margin-left: 6px;
+/*  border: 1px solid #333; */
+	text-align: right;
+	
+	
+}
+
+#identity form>table {
+	float: right;
+}
+
+#main {
+	width: auto;
+	height: 500px;
+	display: block;
+	border: 1px solid #333;
+}
+
+#navigation {
+	float: left;
+	width: 154px;
+	height: 472px;
+	/* padding: 6px;
+	 margin-right: 6px;
+	 margin-left: 6px; 
+	margin-top: 6px; */
+	border: 1px solid #333;
+	background-color: maroon;
+	text-align: center;
+}
+
+#content{
+	float: left;
+	height: 472px;
+	width: 660px;
+
+	/* padding: 6px;
+	margin-top: 6px;
+	margin-right: 6px;
+	margin-left: 6px; */
+	border: 1px solid #333;
+	background-color: white;
+}
+
+#footer {
+	width: auto;
+	display: block;
+	height: 24px;
+	border: 1px solid #333;
+	text-align:center;
+	vertical-align:middle;
+	color: yellow;
+    background-color: blue;
+}
+
+.error {
+	color: red;
+	font-weight: bold;
+}
+
+.info {
+	color: green;
+	font-weight: bold;
+}
+
+.ui-widget, .ui-widget .ui-widget {
+font-size: 90% !important;
+}

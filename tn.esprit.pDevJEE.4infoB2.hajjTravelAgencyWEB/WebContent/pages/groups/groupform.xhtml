@@ -1,0 +1,30 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">             
+                
+                <p:panel id="details"  header="Group Details" visible="#{groupBean.formDisplayed}">
+				<h:form rendered="#{groupBean.formDisplayed}">
+					<p:panelGrid columns="2">
+						<h:outputText value="id" />
+						<h:inputText value="#{groupBean.group.idGroup}" />
+						<h:outputText value="Number" />
+						<h:inputText value="#{groupBean.group.groupNumber}" />
+						<h:outputText value="Min Size" />
+						<h:inputText value="#{groupBean.group.groupMinSize}" />
+						<h:outputText value="Max Size" />
+						<h:inputText value="#{groupBean.group.groupMaxSize}" />
+						
+						<p:commandButton actionListener="#{groupBean.doCancel}" value="cancel" update=":details"/>
+						<p:panelGrid columns="2">
+						<p:commandButton value="delete" actionListener="#{groupBean.doDelete}" update=":master :details"/>
+							<p:commandButton value="save" actionListener="#{groupBean.doSaveOrUpdate}" update=":master :details"/>
+						</p:panelGrid>
+						
+					</p:panelGrid>
+				</h:form>
+				</p:panel>
+                	
+
+</ui:composition>

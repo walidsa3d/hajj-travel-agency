@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf13662350791790" configfile="/tn.esprit.pDevJEE.4infoB2.hajjTravelAgencyWEB/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" x="155" y="160" id="pf13662354971031" referenceLink="//@navigationRule.1/@fromViewId|" path="/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="erreur.xhtml" x="471" y="166" id="pf13662354971033" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" path="/erreur.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="ok.xhtml" x="508" y="57" id="pf13662367513095" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" path="/ok.xhtml"/>
+</pageflow:Pageflow>

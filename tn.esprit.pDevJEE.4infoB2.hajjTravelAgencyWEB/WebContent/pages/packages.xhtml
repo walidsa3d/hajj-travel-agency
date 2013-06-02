@@ -1,0 +1,40 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/template/template.xhtml">
+                	
+			<ui:define name="pageTitle">
+			Offers			
+			</ui:define>	
+			<ui:define name="pTitle">
+			Our Offers
+			</ui:define>		
+			<ui:define name="pageContent">
+			    <p:dataGrid var="pkg" value="#{packageBean.packages}" columns="3"  
+        rows="12" >
+  
+        <p:panel header="#{pkg.namePackage}" style="text-align:center">  
+            <h:panelGrid columns="2" style="width:100%">  
+                  <h:outputText value="Price" />    
+                <h:outputText value="#{pkg.pricePackage}" />                    
+                <h:outputText value="Capacity" />    
+                <h:outputText value="#{pkg.capacityPackage}" /> 
+                <h:outputText value="Hotel Mecca" />  
+                <h:outputText value="#{pkg.hotelMecca}" />                                     
+                <h:outputText value="Hotel Medina" />  
+                <h:outputText value="#{pkg.hotelMedina}" />
+                <h:selectBooleanCheckbox value="" />                                      
+                   
+                
+   
+            </h:panelGrid>  
+        </p:panel>  
+  
+    </p:dataGrid> 
+			
+			
+			
+			</ui:define>
+</ui:composition>
