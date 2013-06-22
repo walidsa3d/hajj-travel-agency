@@ -18,8 +18,12 @@
 	<h:inputText value="#{registerBean.user.nameUser}" />
 	<h:outputText value="Email" />
 	<h:inputText value="#{registerBean.user.userEmail}" />
-	<h:outputText value="" />
-	<p:commandButton value="Register" action="#{registerBean.register}"/>	
+	<h:outputText value="Username" />
+	<h:inputText value="#{registerBean.user.userName}" />
+	<h:outputText value="Password" />
+	<h:inputText value="#{registerBean.user.userPassword}" />
+	<h:outputText value="" />	
+	<p:commandButton value="Register" actionListener="#{registerBean.register}"/>	
 	</p:panelGrid>
 	</h:form>
 			

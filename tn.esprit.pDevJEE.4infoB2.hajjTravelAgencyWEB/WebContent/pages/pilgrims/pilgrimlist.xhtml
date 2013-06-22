@@ -22,7 +22,7 @@
 			<f:facet name="header">  
 				  My Pilgrims
         </f:facet>
-        <p:ajax event="rowSelect" listener="#{pilgrimBean.onRowSelect()}" update=":pdetails"/>
+        <p:ajax event="rowSelect" listener="#{pilgrimBean.onRowSelect}" update=":pdetails"/>
 
 
 			<p:column headerText="First">
@@ -42,20 +42,20 @@
 			</p:column>
 
 			<p:column headerText="Passport">
-				<h:outputText value="#{pilgrimRegBean.pilgrim.pilgrimPassport}" />
+				<h:outputText value="#{pil.pilgrimPassport}" />
 			</p:column>
 
 			<p:column headerText="Address">
-				<h:outputText value="#{pilgrimBean.pilgrim.pilgrimAddress}" />
+				<h:outputText value="#{pil.pilgrimAddress}" />
 			</p:column>
 			<p:column headerText="Email">
-				<h:outputText value="#{pilgrimBean.pilgrim.pilgrimEmail}" />
+				<h:outputText value="#{pil.pilgrimEmail}" />
 			</p:column>
 			<p:column headerText="Phone">
-				<h:outputText value="#{pilgrimBean.pilgrim.pilgrimPhone}" />
+				<h:outputText value="#{pil.pilgrimPhone}" />
 			</p:column>
 	</p:dataTable>
-    <p:commandButton  actionListener="#{pilgrimBean.doNew()}" value="New" icon="ui-icon-circle-plus" update=":pdetails"/>
+    <p:commandButton  actionListener="#{pilgrimBean.doNew}" value="New" icon="ui-icon-circle-plus" update=":pdetails"/>
 	
 
 	</h:form>

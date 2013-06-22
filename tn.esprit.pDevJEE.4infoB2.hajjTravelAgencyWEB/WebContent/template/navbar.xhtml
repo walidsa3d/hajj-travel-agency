@@ -7,9 +7,12 @@
               
     <p:menu>  
         <p:submenu label="Home">  
+            <p:menuitem value="Logged in as #{authbean.user.userName}" rendered="#{authbean.loggedIn}" style="color: yellow;"/>
+        
             <p:menuitem value="Home"  url="/index.jsf"/>          
-            <p:menuitem value="Sign in"  url="/pages/login.jsf"/>  
-            <p:menuitem value="Register" url="/pages/glregister.jsf"/>  
+            <p:menuitem value="Sign in"  url="/pages/login.jsf"/> 
+            <p:menuitem value="Sign Out"  action="#{authbean.logout}" rendered="#{authbean.loggedIn}"/> 
+             
         </p:submenu>  
         <p:submenu label="Offers">  
             <p:menuitem value="Packages" url="/pages/packages.jsf"/> 
@@ -17,7 +20,7 @@
              
         </p:submenu> 
           <p:submenu label="Documents">  
-            <p:menuitem value="Contract" />  
+            <p:menuitem value="Contract"  url="/resources/file/Contract.pdf"  style="color: orange;"/>  
         </p:submenu>  
         <p:submenu label="My Space" rendered="#{authbean.userType.equals('groupleader')}">  
         <p:menuitem value="My Profile" url="/pages/glprofile.jsf" />

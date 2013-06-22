@@ -16,12 +16,11 @@
 						<h:outputText value="Max Size" />
 						<h:inputText value="#{groupBean.group.groupMaxSize}" />
 						
-						<p:commandButton actionListener="#{groupBean.doCancel}" value="cancel" update=":details"/>
-						<p:panelGrid columns="2">
+						<p:panelGrid columns="3">
 						<p:commandButton value="delete" actionListener="#{groupBean.doDelete}" update=":master :details"/>
-							<p:commandButton value="save" actionListener="#{groupBean.doSaveOrUpdate}" update=":master :details"/>
-						</p:panelGrid>
-						
+						<p:commandButton value="save" actionListener="#{groupBean.doSave}" update=":master :details"/>
+						<p:commandButton value="update" actionListener="#{groupBean.doUpdate}" update=":master :details"/>
+										</p:panelGrid>						
 					</p:panelGrid>
 				</h:form>
 				</p:panel>

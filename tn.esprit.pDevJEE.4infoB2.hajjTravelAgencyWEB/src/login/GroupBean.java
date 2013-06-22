@@ -1,5 +1,6 @@
 package login;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -17,7 +18,12 @@ import tn.esprit.pDevJEE.infoB2.hajjTravelAgency.services.pilgrimManagement.Grou
 
 @ManagedBean
 @ViewScoped
-public class GroupBean {
+public class GroupBean implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6010085274506968381L;
+
 	@EJB
 	private GroupManLocal gml;
 	
@@ -58,13 +64,17 @@ public class GroupBean {
 	public void setFormDisplayed(boolean formDisplayed) {
 		this.formDisplayed = formDisplayed;
 	}
-	public void doSaveOrUpdate(){
+	public void doUpdate(){
 		gml.updateGroup(group);
 		groups = gml.getAllGroups();
-		formDisplayed = false;
+	}
+	public void doSave(){
+		gml.addGroup(group);
+		groups = gml.getAllGroups();
 	}
 	
 	public void doNew(){
+		group = new PGroup();
 		formDisplayed = true;
 	}
 	
@@ -76,7 +86,6 @@ public class GroupBean {
 	public void doDelete(){
 		gml.removeGroup(group);
 		groups = gml.getAllGroups();
-		formDisplayed = false;
 	}
 	public void onRowSelect(SelectEvent event) {
 		formDisplayed=true;

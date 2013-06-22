@@ -26,7 +26,7 @@ public class PilgrimBean implements Serializable{
 	private Pilgrim pilgrim=new Pilgrim();
 	private List<Pilgrim> pilgrims;
 	private boolean formDisplayed = false;
-	private int selectedPilgrimId = -1;
+//	private int selectedPilgrimId = -1;
 
 	
 	@PostConstruct
@@ -66,15 +66,30 @@ public class PilgrimBean implements Serializable{
 	}
 
 
-	public int getSelectedPilgrimId() {
-		return selectedPilgrimId;
-	}
-
-	public void setSelectedPilgrimId(int selectedPilgrimId) {
-		this.selectedPilgrimId = selectedPilgrimId;
-	}
+//	public int getSelectedPilgrimId() {
+//		return selectedPilgrimId;
+//	}
+//
+//	public void setSelectedPilgrimId(int selectedPilgrimId) {
+//		this.selectedPilgrimId = selectedPilgrimId;
+//	}
 	public void doNew(){
+		pilgrim=new Pilgrim();
 		formDisplayed = true;
+	}
+	public void doCancel(){
+		pilgrim=new Pilgrim();
+		formDisplayed = true;
+	}
+	public void doDelete(){
+		pml.deletePilgrim(pilgrim.getPilgrimCin());
+		pilgrims=pml.getAllPilgrims();
+		formDisplayed = false;
+	}
+	public void doSaveOrUpdate(){
+		pml.updatePilgrim(pilgrim);
+		pilgrims=pml.getAllPilgrims();
+		formDisplayed = false;
 	}
 	public void onRowSelect(){
 		formDisplayed = true;

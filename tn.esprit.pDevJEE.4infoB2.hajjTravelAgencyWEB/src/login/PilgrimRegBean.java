@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ViewScoped;
+import javax.faces.bean.RequestScoped;
 
 import org.primefaces.context.RequestContext;
 
@@ -13,7 +13,7 @@ import tn.esprit.pDevJEE.infoB2.hajjTravelAgency.services.pilgrimManagement.Pilg
 
 
 @ManagedBean
-@ViewScoped
+@RequestScoped
 
 public class PilgrimRegBean implements Serializable{
 	

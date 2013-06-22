@@ -4,11 +4,9 @@
                 xmlns:ui="http://java.sun.com/jsf/facelets"
                 xmlns:p="http://primefaces.org/ui">
                 
-                  <p:panel id="pdetails"  header="Group Details" visible="#{pilgrimBean.formDisplayed}">
+                  <p:panel id="pdetails"  header="Pilgrim Details" visible="#{pilgrimBean.formDisplayed}">
 				<h:form rendered="#{pilgrimBean.formDisplayed}">
 					<p:panelGrid columns="2">
-						<h:outputText value="id" />
-						<h:inputText value="" />
 						<h:outputText value="First Name" />
 						<h:inputText value="#{pilgrimBean.pilgrim.pilgrimFirstName}" />
 						<h:outputText value="Last Name" />
@@ -26,10 +24,10 @@
 						<h:outputText value="Phone" />
 						<h:inputText value="#{pilgrimBean.pilgrim.pilgrimPhone}" />
 						
-						<p:commandButton actionListener="#{groupBean.doCancel()}" value="cancel" />
+						<p:commandButton actionListener="#{pilgrimBean.doCancel}" value="cancel" update=":pdetails"/>
 						<p:panelGrid columns="2">
-						<p:commandButton value="delete" actionListener="#{groupBean.doDelete()}" />
-							<p:commandButton value="save" actionListener="#{groupBean.doSaveOrUpdate()}" update=":pmaster"/>
+						<p:commandButton value="delete" actionListener="#{pilgrimBean.doDelete}" update=":pmaster"/>
+						<p:commandButton value="save" actionListener="#{pilgrimBean.doSaveOrUpdate}" update=":pmaster :pdetails"/>
 						</p:panelGrid>
 						
 					</p:panelGrid>

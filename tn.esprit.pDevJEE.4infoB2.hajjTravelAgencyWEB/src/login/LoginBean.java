@@ -87,7 +87,7 @@ UserManLocal usl;
 			loggedIn = true;
 			if (user.getUserRole().getNameRole().equals("pilgrim")) {
 				userType="pilgrim";
-				navigateTo = "/pages/pilgrim.jsf";
+				navigateTo = "/pages/pilgrimprofile.jsf";
 			}
 			if (user.getUserRole().getNameRole().equals("groupleader")) {
 				userType="groupleader";
