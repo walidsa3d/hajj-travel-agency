@@ -12,10 +12,10 @@
 			Our Offers
 			</ui:define>		
 			<ui:define name="pageContent">
-			    <p:dataGrid var="pkg" value="#{packageBean.packages}" columns="3"  
+			    <p:dataGrid var="pkg" value="#{packageBean.packages}" columns="2"  
         rows="12" >
   
-        <p:panel header="#{pkg.namePackage}" style="text-align:center">  
+        <p:panel header="#{pkg.namePackage}" style="text-align:center; color:yellow;">  
             <h:panelGrid columns="2" style="width:100%">  
                   <h:outputText value="Price" />    
                 <h:outputText value="#{pkg.pricePackage}" />                    
@@ -25,6 +25,8 @@
                 <h:outputText value="#{pkg.hotelMecca.nameHotel}" />                                     
                 <h:outputText value="Hotel Medina" />  
                 <h:outputText value="#{pkg.hotelMedina.nameHotel}" />
+                <h:outputText value="Date" />                                
+                <h:outputText value="#{pkg.oneWayFlight.dateFlight}" />
                 <h:selectBooleanCheckbox value="" />                                      
                    
                 

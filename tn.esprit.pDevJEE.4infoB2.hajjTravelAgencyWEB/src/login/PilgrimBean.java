@@ -84,12 +84,10 @@ public class PilgrimBean implements Serializable{
 	public void doDelete(){
 		pml.deletePilgrim(pilgrim.getPilgrimCin());
 		pilgrims=pml.getAllPilgrims();
-		formDisplayed = false;
 	}
 	public void doSaveOrUpdate(){
 		pml.updatePilgrim(pilgrim);
 		pilgrims=pml.getAllPilgrims();
-		formDisplayed = false;
 	}
 	public void onRowSelect(){
 		formDisplayed = true;

@@ -6,7 +6,7 @@ body {
 	background-image: url(../images/top-rept.jpg);
 	background-repeat: repeat-x;
 	background-position: left top;
-	margin: 37px 0px 0px 0px;
+	margin: 17px 0px 0px 0px;
 }
 h1, h2, h3, h4, h5, h6, p, ul, ol, li, form, input, textarea {
 	padding: 0px;
@@ -32,16 +32,16 @@ a:hover {
 	background-repeat: no-repeat;
 	background-position: left top;
 	width: 989px;
-	height: 203px;
+	height: 103px;
 	float: left;
 }
 .banner h1 {
 	font-family: "Times New Roman", Times, serif;
-	font-size: 58px;
+	font-size: 48px;
 	line-height: 100%;
-	color: #FFFFFF;
-	margin-left: 391px;
-	margin-top: 72px;
+	color: fuchsia;
+	margin-left: 191px;
+	margin-top: 32px;
 	text-align:center;
 }
 .topmenu {

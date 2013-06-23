@@ -28,9 +28,14 @@
         <p:menuitem value="My Groups"  url="/pages/groups/mygroups.jsf" />              
         </p:submenu> 
          <p:submenu label="My Space" rendered="#{authbean.userType.equals('pilgrim')}">  
-        <p:menuitem value="My Profile" url="/pages/pilgrimprofile.jsf" />
-             
+        <p:menuitem value="My Profile" url="/pages/pilgrimprofile.jsf" />             
         </p:submenu> 
+          <p:submenu label="My Space" rendered="#{authbean.userType.equals('admin')}">  
+        <p:menuitem value="Pilgrims" url="/pages/admin/pilgrims.jsf" />          
+          
+        <p:menuitem value="Reports" url="/pages/reports.jsf" />             
+        </p:submenu> 
+         
          
     </p:menu>  
 </h:form> 

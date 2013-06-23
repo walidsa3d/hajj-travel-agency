@@ -93,6 +93,10 @@ UserManLocal usl;
 				userType="groupleader";
 				navigateTo = "/pages/glprofile.jsf";
 			}
+			if (user.getUserRole().getNameRole().equals("admin")) {
+				userType="admin";
+				navigateTo = "/pages/admin/admin.jsf";
+			}
 			
 		} else {
 			FacesMessage message = new FacesMessage("Bad credentials!");

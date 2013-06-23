@@ -5,7 +5,7 @@
 	xmlns:p="http://primefaces.org/ui">
 	
 	
-		<h:form id="pmaster">
+		<h:form id="mmaster">
 	<p:dataTable rendered="#{not empty pilgrimBean.pilgrims}"
 		value="#{pilgrimBean.pilgrims}" 
 		var="pil"
@@ -22,7 +22,7 @@
 			<f:facet name="header">  
 				  My Pilgrims
         </f:facet>
-        <p:ajax event="rowSelect" listener="#{pilgrimBean.onRowSelect}" update="::mdetails"/>
+        <p:ajax event="rowSelect" listener="#{pilgrimBean.onRowSelect}" update=":mdetails"/>
 
 
 			<p:column headerText="First">
