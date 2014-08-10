@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+		<title><ui:insert name="pageTitle"></ui:insert></title>
+		<h:outputStylesheet library="css" name="style.css"/>
+</h:head>
+<body>
+<div class="main">
+<div class="page">
+<div class="header">
+<div class="banner">
+<h1>ESPRIT Hajj Travel Agency</h1>
+</div>
+<div class="topmenu"><ui:include src="/template/topbar.xhtml" /></div>
+
+<div class="content">
+<div class="content-in">
+<div class="left-panel">
+
+<ui:include src="/template/navbar.xhtml" />
+
+</div>
+<div class="right-panel">
+<div class="right-panel-in">
+<div class="row">
+<h2 class="title"><span><ui:insert name="pTitle"></ui:insert></span></h2>
+<div class="row2">
+<ui:insert name="pageContent"></ui:insert>
+</div>
+</div>
+<div class="vline">
+<div class="section1">
+<h2 class="title"></h2>
+<div class="row" style="padding-left: 40px;">
+
+</div>
+</div>
+<div class="section2">
+<h2 class="title"></h2>
+<div class="row">
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<p>Copyright 2013. ESPRIT Hajj Travel Agency</p>
+<ul>
+  <li style="border-left: medium none;"><a href="index.html">Home</a></li>
+  <li><a href="#">About Us</a></li>
+  <li><a href="#">Email</a></li>
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Links</a></li>
+  <li><a href="#">Contact</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+</body>
+</html>
